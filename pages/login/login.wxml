@@ -1,0 +1,39 @@
+<view class="top-bg"></view>
+<view class="contain">
+  <view class="card">
+    <view class="title">RENEW</view>
+    <!-- <picker bindchange="choose" value="{{ids}}" range="{{campus}}" range-key="name">
+      <view class="campus">
+        <block wx:if="{{ids!==-1}}">当前选择：{{campus[ids].name}}</block>
+        <block wx:if="{{ids==-1}}">请选择您所在园区</block>
+        <image class="right" src="/images/right.png" />
+      </view>
+    </picker>
+    <view class="contact">
+      <input bindinput="emInput" value="{{email}}" maxlength="30" placeholder-class="pache" placeholder="输入您的手机号" />
+    </view>
+    <view class="contact">
+      <input bindinput="wxInput" value="{{wxnum}}" maxlength="30" placeholder-class="pache" placeholder="输入您的微信号(选填)" />
+    </view>
+    <view class="contact">
+      <input type="emInput" bindinput="nameInput" value="{{name}}" maxlength="20" placeholder-class="pache" placeholder="输入您的姓名(请如实填写)" />
+    </view>
+    <view class="contact">
+      <input type="emInput" bindinput="stuInput" value="{{stunum}}" maxlength="20" placeholder-class="pache" placeholder="输入您的学号(请如实填写)" />
+    </view> -->
+  </view>
+  <van-divider />
+  <van-checkbox value="{{ checked }}" checked-color="#fbbd08" bind:change="onChange">
+    授权接收订单消息通知
+  </van-checkbox>
+  <!--底部确认-->
+  <button class="confirm" open-type='getUserInfo' bindgetuserinfo="getUserInfo">一键登录</button>
+  <view class="shen_title">
+    <image class="about" src="/images/about.png" />使用申明
+  </view>
+  <view class="des">1. 请确保手机号和姓名,学号百分百正确，之后将有人工审核,用于发送实时订单通知。</view>
+  <view class="des">2. 在未经您同意及确认之前，本程序不会将您的注册信息用于任何其它商业目的。</view>
+  <view class="des">3. 本程序将对您所提供的资料进行严格的管理及保护，本程序将使用相应的技术，防止您的个人资料丢失、被盗用或遭篡改。</view>
+  <view class="des">4. 本司承诺注册信息会严格保密，不会对外泄露!</view>
+  <view class="des">5. 请您放心使用！</view>
+</view>
