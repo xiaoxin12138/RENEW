@@ -9,10 +9,9 @@
 </view>
 <van-notice-bar left-icon="volume-o" text="{{indexTip}}" speed="50" />
 <swiper class="banner" indicator-dots autoplay indicator-active-color="#fbbd08" circular>
-  <block wx:for="{{banner}}" wx:key="id">
-    <swiper-item>
-      <!-- <image lazy-load src="{{item}}" bindtap="goweb" data-web="{{item}}" class="banner_image" mode="aspectFill" /> -->
-      <image lazy-load src="{{item}}" data-web="{{item}}" class="banner_image" mode="aspectFill" />
+  <block wx:for="{{list}}" wx:key="_id">
+    <swiper-item wx:if="{{item._id === '1701797115411734530' || item._id === '1700463543367471105'}}" bindtap="detail" data-id="{{item._id}}">
+      <image lazy-load src="{{item.bookinfo.imgs[0]}}" class="banner_image" mode="aspectFill" />
     </swiper-item>
   </block>
 </swiper>

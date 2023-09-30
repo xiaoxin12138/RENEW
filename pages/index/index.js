@@ -231,21 +231,21 @@ Page({
     })
   },
   //获取轮播
-  getbanner() {
-    let that = this;
-    let imageurl = ["http://renew-lhoss.oss-cn-shenzhen.aliyuncs.com/2be82a91-9f0f-40c6-b3ff-8d9509aa936e-kqH4pLUa6j3H5832b39f13ff897896dc4ec01913c5db.png?Expires=9223372036854775&OSSAccessKeyId=LTAI5tEeGnX2N23Xv9njeTeF&Signature=G%2F2SO0CF%2Bv%2BvVYw2R7iRJpnxPmY%3D", "http://renew-lhoss.oss-cn-shenzhen.aliyuncs.com/df893226-aeb2-4b36-9294-f25119471f81-Bzo1KACJnjW994e90b136f661fe4e820dd89d2466f1a.png?Expires=9223372036854775&OSSAccessKeyId=LTAI5tEeGnX2N23Xv9njeTeF&Signature=hkAz1H1e6UPDp2gD8Jv1HI0Psl0%3D"]
-    that.setData({
-      banner: imageurl
-    })
+  // getbanner() {
+  //   let that = this;
+  //   let imageurl = ["http://renew-lhoss.oss-cn-shenzhen.aliyuncs.com/2be82a91-9f0f-40c6-b3ff-8d9509aa936e-kqH4pLUa6j3H5832b39f13ff897896dc4ec01913c5db.png?Expires=9223372036854775&OSSAccessKeyId=LTAI5tEeGnX2N23Xv9njeTeF&Signature=G%2F2SO0CF%2Bv%2BvVYw2R7iRJpnxPmY%3D", "http://renew-lhoss.oss-cn-shenzhen.aliyuncs.com/df893226-aeb2-4b36-9294-f25119471f81-Bzo1KACJnjW994e90b136f661fe4e820dd89d2466f1a.png?Expires=9223372036854775&OSSAccessKeyId=LTAI5tEeGnX2N23Xv9njeTeF&Signature=hkAz1H1e6UPDp2gD8Jv1HI0Psl0%3D"]
+  //   that.setData({
+  //     banner: imageurl
+  //   })
 
-  },
-  //跳转轮播链接
-  goweb(e) {
-    console.log(e.currentTarget.dataset.web)
-    wx.navigateTo({
-      url: '/pages/web/web?url=' + e.currentTarget.dataset.web,
-    })
-  },
+  // },
+  // //跳转轮播链接
+  // goweb(e) {
+  //   console.log(e.currentTarget.dataset.web)
+  //   wx.navigateTo({
+  //     url: '/pages/web/web?url=' + e.currentTarget.dataset.web,
+  //   })
+  // },
   onShareAppMessage() {
     return {
       title: JSON.parse(config.data).share_title,
