@@ -6,7 +6,7 @@
 				<view class="goods_title text-cut">{{detail.bookinfo.good}}</view>
 				<view class="goods_author text-cut">卖家：{{userinfo.info.nickName}}</view>
 			</view>
-			<view class="goods_price">￥{{detail.price}}元</view>
+			<view class="goods_price">￥{{detail.price / 100}}元</view>
 		</view>
 		<view class="border"></view>
 		<view class="list">
@@ -33,7 +33,7 @@
 		</view>
 		<view class="fare_box">
 			<view class="fare_title">支付金额</view>
-			<view class="fare_des">￥{{detail.price}}.00元</view>
+			<view class="fare_des">￥{{detail.price / 100}}元</view>
 		</view>
 		<view class="border"></view>
 		<view class="orderfare">CONTACT SELLER</view>

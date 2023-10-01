@@ -15,7 +15,7 @@
           <view class="b11">
             <view class="b111 text-cut">{{item.bookinfo.good}}</view>
           </view>
-          <view class="b12">￥{{item.price}}元</view>
+          <view class="b12">￥{{item.price / 100}}元</view>
         </view>
       </view>
       <view class="c">

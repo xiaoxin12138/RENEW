@@ -85,7 +85,7 @@ Page({
 
     //避免自娱自乐[跟自己聊天]
     if (myid != sallerid) {
-      
+
       wx.request({
         url: app.host + '/chatRooms/add',
         method: 'GET',
@@ -170,14 +170,14 @@ Page({
   //获取卖家信息
   getSeller(e) {
     let that = this;
-   // var sallerid = this.data.goodssaller;
+    // var sallerid = this.data.goodssaller;
     // var myid = this.data.openid;
     var sallerid = this.data.publishinfo._openid;
     wx.request({
       url: app.host + '/user/getlist',
       method: 'GET',
       data: {
-          openid: sallerid,
+        openid: sallerid,
       },
       success: function (res) {
         console.log("获取卖家信息");
@@ -423,7 +423,7 @@ Page({
       url: e.currentTarget.dataset.go,
     })
   },
-  
+
   //为了数据安全可靠，每次进入获取一次用户信息
   getuserdetail() {
     if (!app.openid) {
