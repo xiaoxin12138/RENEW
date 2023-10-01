@@ -7,6 +7,8 @@ const MAX_IMG_NUM = 8;
 Page({
   data: {
     isExist: '',
+    price: 10.01,
+    inputPrice: '',
     selectPhoto: true,
     systeminfo: app.systeminfo,
     params: {
@@ -33,7 +35,7 @@ Page({
     let that = this;
     that.setData({
       dura: 30,
-      price: 10,
+      inputPrice:'10.00',
       place: '',
       chooseDelivery: 0,
       cids: '-1', //类别选择的默认值
@@ -82,21 +84,30 @@ Page({
     // this.initial();
   },
   //价格输入改变
-  priceChange(e) {
-    this.data.price = e.detail;
+  priceChange: function (e) {
+    const inputPrice = parseFloat( e.detail.value )// 尝试解析输入的值为浮点数
+    console.log(inputPrice)
+    
+      const price = inputPrice.toFixed(2); // 保留两位小数
+      this.setData({
+        price: price,
+      });
+      console.log(price)
+
   },
+  //检验价格是否为2位小数
+  
+
   //时长才输入改变
   duraChange(e) {
     this.data.dura = e.detail;
   },
   //地址输入
   placeInput(e) {
-    console.log(e)
     this.data.place = e.detail.value
   },
   //物品输入
   goodInput(e) {
-    console.log(e)
     this.data.good = e.detail.value
   },
   //类别选择
@@ -196,6 +207,8 @@ Page({
   //正式发布
   publish() {
     let that = this;
+     // 将价格转换为整数（乘以100）
+    const priceInCents = parseFloat(that.data.price) * 100;
     if (!app.openid) {
       wx.showModal({
         title: '温馨提示',
@@ -258,7 +271,7 @@ Page({
               // dura: new Date().getTime() + that.data.dura * (24 * 60 * 60 * 1000),
               // status: 0, //0在售；1买家已付款，但卖家未发货；2买家确认收获，交易完成；3、交易作废，退还买家钱款
               name: that.data.good,
-              prices: that.data.price, //售价
+              prices: priceInCents, // 售价将以分为单位的价格发送到服务器
               //分类
               kindid: that.data.kindid, //区别通用还是用途
               collegeid: that.data.cids, //学院id，-1表示通用类

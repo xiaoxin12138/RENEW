@@ -10,7 +10,7 @@
       "list": [
         {
           "name": "",
-          "pathName": "pages/start/start",
+          "pathName": "pages/publish/publish",
           "query": "",
           "launchMode": "default",
           "scene": null

@@ -40,7 +40,8 @@
 				<view class="b_name">价格(元)</view>
 				<!-- <van-stepper value="{{price}}" integer bind:change="priceChange" min="1" max="10000" /> -->
         <!--  TODO 限制输入的小数位数为2-->
-        <van-stepper value="{{price}}"  bind:change="priceChange" min="1" max="10000" />
+        <!-- <van-stepper value="{{price}}"  bind:change="priceChange" min="1" max="10000" /> -->
+        <input type = "digit" value = "{{ inputPrice }}" bindinput = "priceChange" />
 			</view>
 			<view class="b_border"></view>
 			<view class="b_bar">
