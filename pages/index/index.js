@@ -144,7 +144,6 @@ Page({
       },
       success: (res) => {
         wx.stopPullDownRefresh(); //暂停刷新动作
-        console.log(res.data);
         if (res.data.list.length == 0) {
           that.setData({
             nomore: true,
@@ -156,13 +155,19 @@ Page({
           that.setData({
             nomore: true,
             page: 0,
-            list: res.data.list,
+            list: res.data.list.map(item => ({
+              ...item,
+              price: item.price / 100 // 将价格字段除以100
+            })),
           });
 
         } else {
           that.setData({
             page: 0,
-            list: res.data.list,
+            list: res.data.list.map(item => ({
+              ...item,
+              price: item.price / 100 // 将价格字段除以100
+            })),
             nomore: false,
           });
 
