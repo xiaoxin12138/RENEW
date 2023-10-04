@@ -9,6 +9,7 @@ Page({
    */
   data: {
     avatarUrl: defaultAvatarUrl,
+    openid:'',
   },
   onChooseAvatar(e) {
     const { avatarUrl } = e.detail 
@@ -21,7 +22,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+    this.setData({
+      openid: app.openid
+    })
+    console.log(openid)
   },
 
   /**

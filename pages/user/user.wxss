@@ -18,3 +18,30 @@
 .container {
   display: flex;
 }
+
+.weui-input {
+  margin-left: 10px;
+  border-style:outset;
+  border-right-color:#556b12;
+  border-bottom-color: #556b12;
+  text-align: center;
+  background-color: white;
+  height: 40px;
+  width: 93%;
+}
+.b-user{
+  margin-top: 30px;
+      width:260px;
+      height: 50px;
+      background:#fbbd08;
+      color: #fff;
+      border-radius: 40px;
+      letter-spacing: 4px;
+      border: none;
+      font-weight: 500px;
+      text-align: center;
+}
+.user{
+  height: 100%;
+  background-color: lightgrey;
+}

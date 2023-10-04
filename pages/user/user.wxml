@@ -1,12 +1,19 @@
-<view>
+<view class="user">
+  <view>点击上传头像</view>
   <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
     <image class="avatar" src="{{avatarUrl}}"></image>
   </button> 
-  <mp-form>
-    <mp-cells>
-      <mp-cell title="昵称">
-        <input type="nickname" class="weui-input" placeholder="请输入昵称"/>
-      </mp-cell>
-    </mp-cells>
-  </mp-form>
+  <view class="input-box">
+    <mp-form>
+      <mp-cells>
+        <mp-cell title="昵称">
+          <input type="nickname" class="weui-input" placeholder="请输入昵称"/>
+        </mp-cell>
+      </mp-cells>
+    </mp-form>
+  </view>
+  <button class="b-user">点击上传</button>
 </view>
+<view>{{openid}}</view>
+
+ 
