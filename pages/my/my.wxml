@@ -38,6 +38,14 @@
 		<image src="/images/go.png"></image>
 	</view>
 
+  <view class="bottom_card" bind:tap="go" data-go="/pages/user/user">
+    <view class="bottom_1">
+			<image src="/images/tabbar/my.png"></image>
+			<view>修改头像昵称</view>
+		</view>
+    <image src="/images/go.png"></image>
+  </view>
+
 	<view class="bottom_card" bindtap="go" data-go="/pages/help/help">
 		<view class="bottom_1">
 			<image src="/images/illustrate.png"></image>

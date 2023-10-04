@@ -207,10 +207,10 @@ Page({
         })
       },
       fail() {
-        wx.showToast({
-          title: '获取失败',
-          icon: 'none'
-        })
+        // wx.showToast({
+        //   title: '获取失败',
+        //   icon: 'none'
+        // })
       }
     })
   },

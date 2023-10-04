@@ -94,6 +94,12 @@
       "pages": [
         "appreciateCode"
       ]
+    },
+    {
+      "root": "pages/user",
+      "pages": [
+        "user"
+      ]
     }
   ],
   "sitemapLocation": "sitemap.json",
@@ -122,22 +128,23 @@
     ]
   },
   "usingComponents": {
-    "van-steps": "/vant/steps/index",
-    "van-transition": "/vant/transition/index",
-    "van-stepper": "/vant/stepper/index",
-    "van-action-sheet": "/vant/action-sheet/index",
-    "van-popup": "/vant/popup/index",
+    "van-steps": "@vant/weapp/steps/index",
+    "van-transition": "@vant/weapp/transition/index",
+    "van-stepper": "@vant/weapp/stepper/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-popup": "@vant/weapp/popup/index",
     "canvasdrawer": "/components/canvasdrawer/canvasdrawer",
     "tips": "components/add_tips/index",
     "welcome": "components/welcome/welcome",
-    "van-dialog": "/vant/dialog/index",
-    "van-button": "/vant/button/index",
-    "van-picker": "/vant/picker/index",
-    "van-icon": "/vant/icon/index",
-    "van-uploader": "/vant/uploader/index",
-    "van-checkbox": "/vant/checkbox/index",
-    "van-checkbox-group": "/vant/checkbox-group/index",
-    "van-divider": "/vant/divider/index",
-    "van-notice-bar": "vant/notice-bar/index"
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-picker": "@vant/weapp/picker/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index",
+    "van-field": "@vant/weapp/field/index"
   }
 }
