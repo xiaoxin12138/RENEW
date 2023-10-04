@@ -2,6 +2,11 @@ page {
       background: #f6f7fa;
 }
 
+.b_input{
+  
+  width: 70px;
+}
+
 .top_steps {
       position: fixed;
       top: 0rpx;

@@ -202,6 +202,15 @@ Page({
         return false;
       }
     }
+    //检测发布时间是否有小数
+    const checkdura = this.data.dura
+    if(checkdura%1!=0){
+      wx.showToast({
+        title: "发布时间不能包含小数",
+        icon: 'none',
+      })
+      return
+    }
     that.publish();
   },
   //正式发布
