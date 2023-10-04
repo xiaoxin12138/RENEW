@@ -34,8 +34,6 @@ Page({
   },
   onLoad() {
     this.listkind();
-    this.getbanner();
-
   },
 
   //监测屏幕滚动
@@ -177,7 +175,7 @@ Page({
   },
   more() {
     let that = this;
-    if (that.data.nomore || that.data.list.length < 20) {
+    if (that.data.nomore || that.data.list.length < 10) {
       return false
     }
     let page = that.data.page + 1;
